@@ -168,9 +168,6 @@ async def process_example(client, example, semaphore):
         "error": False
     }
 
-###############################################################################
-# Main Evaluation Function
-###############################################################################
 
 async def evaluate_fhir_generation_async(dataset_path=DATASET_PATH, test_split=TEST_SPLIT, batch_size=None):
     """Evaluate FHIR generation using async processing."""
@@ -185,7 +182,7 @@ async def evaluate_fhir_generation_async(dataset_path=DATASET_PATH, test_split=T
     # Initialize API client
     # client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
     client = AsyncOpenAI(
-    api_key="AIzaSyCqvwr2X0cR8jSOvo_d92FcJNPxNAlErck",
+    api_key="KEY",
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
     # client = AsyncOpenAI(api_key="KEY", base_url="https://api.deepseek.com")
