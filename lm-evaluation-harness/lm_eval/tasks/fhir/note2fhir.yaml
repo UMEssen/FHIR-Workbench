@@ -1,0 +1,36 @@
+task: fhir_generation
+dataset_path: ikim-uk-essen/Note2FHIR
+output_type: generate_until
+test_split: test
+
+# Prompt template
+doc_to_text: "Given the following patient note, generate the corresponding FHIR JSON representation. \
+Please ensure that:\\n \
+- All keys and string values are enclosed in double quotes.\\n \
+- The JSON is valid and follows proper syntax.\\n \
+- There are no comments or code expressions.\\n \
+- Enclose the JSON output within triple backticks with 'json' specified, like this:\\n\\n \
+```json\\n \
+<Your JSON here>\\n \
+```\\n\\n \
+Make sure the first resourceType is Bundle.\\n\\n \
+Patient Note:\\n \
+{{note}}\\n\\n \
+Generate FHIR JSON:\
+"
+
+
+generation_kwargs:
+  do_sample: false
+  max_new_tokens: 8196
+  # max_tokens: 8196  # GPT
+
+
+# Target field
+doc_to_target: fhir
+
+# Simple metrics
+metric_list:
+  - metric: !function utils.fhir_f1_score
+    aggregation: mean
+    higher_is_better: true

@@ -1,0 +1,47 @@
+task: fhir_resource
+dataset_path: Aiyagh/resource_id_new
+output_type: multiple_choice
+
+test_split: test
+
+# Template for converting document to input text
+doc_to_text: >
+  {{resource}}
+  Question: What type of FHIR resource is this based on its structure?
+  Possible resource types (please choose exactly one): 
+  Immunization, ImagingStudy, Patient, AllergyIntolerance, SupplyDelivery, CareTeam, Procedure,
+  DiagnosticReport, ExplanationOfBenefit, Condition, Practitioner, Organization, Encounter,
+  MedicationAdministration, Observation, MedicationRequest, CarePlan
+  Answer:
+
+# Field containing the target label
+doc_to_target: resourceType
+
+# All resource types from your dataset
+doc_to_choice: [
+    "Immunization",
+    "ImagingStudy",
+    "Patient",
+    "AllergyIntolerance",
+    "SupplyDelivery",
+    "CareTeam",
+    "Procedure",
+    "DiagnosticReport",
+    "ExplanationOfBenefit",
+    "Condition",
+    "Practitioner",
+    "Organization",
+    "Encounter",
+    "MedicationAdministration",
+    "Observation",
+    "MedicationRequest",
+    "CarePlan"
+]
+
+# Metrics to evaluate
+metric_list:
+  - metric: f1
+    aggregation: !function utils.micro_f1_score
+    average: micro
+    hf_evaluate: true
+    higher_is_better: True
