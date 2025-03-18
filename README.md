@@ -2,4 +2,6 @@
 # FHIR-Workbench
 An Test Suit for testing Large Language Models in terms of Fast Healthcare Interoperable Resources (FHIR) knowledge
 
-## TODO 
+## TODOs
+Add description to use lm-eval-harness
+Add description to test proprietary models
