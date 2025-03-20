@@ -10,8 +10,8 @@ FHIR-Workbench provides standardized benchmarks to evaluate LLM performance on h
 
 1. **FHIR-QA**: Tests general knowledge of FHIR concepts and standards through multiple-choice questions
 2. **FHIR-RESTQA**: Evaluates specific understanding of FHIR RESTful API operations, queries, and interactions through multiple-choice questions
-3. **FHIR-ResourceID**: Ability to identify FHIR resource types based on their JSON structure and content
-4. **Note2FHIR**: Assesses ability to generate structured FHIR resources from patient clinical notes
+3. **FHIR-ResourceID**: Tests the ability to identify FHIR resource types based on their JSON structure and content
+4. **Note2FHIR**: Assesses the ability to generate structured FHIR resources from patient clinical notes
 
 ## Dataset Access
 
