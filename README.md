@@ -28,7 +28,7 @@ FHIR tasks are integrated with [lm-eval-harness](https://github.com/EleutherAI/l
 
 ```bash
 # Clone this repository
-git clone https://github.com/yourusername/FHIR-Workbench.git
+git clone https://github.com/UMEssen/FHIR-Workbench.git
 cd FHIR-Workbench
 
 # Install lm-eval-harness with FHIR tasks
