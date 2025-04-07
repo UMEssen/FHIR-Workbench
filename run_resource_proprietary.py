@@ -73,10 +73,7 @@ async def get_model_response(example, client, semaphore):
 
 # Main evaluation function
 async def evaluate_fhir_generation_async(dataset_path=DATASET_PATH, test_split=TEST_SPLIT, batch_size=None, concurrent=MAX_CONCURRENT):
-    # Set up Hugging Face
-    api_token = "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"
-    huggingface_hub.login(api_token)
-    
+
     # Initialize OpenAI client
     # client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
     # client = AsyncOpenAI(
