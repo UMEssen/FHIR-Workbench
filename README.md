@@ -99,14 +99,6 @@ We maintain a comprehensive leaderboard tracking performance of various LLMs on 
 
 The leaderboard currently includes evaluations of 16 models ranging from open-source models (7B-671B parameters) to closed-source commercial models. Models are ranked based on their average performance across all four FHIR tasks.
 
-### Current Top Performers
-
-| Rank | Model          | Size   | FHIR-QA | FHIR-RESTQA | FHIR-ResourceID | Note2FHIR | Avg   |
-|------|----------------|--------|---------|-------------|-----------------|-----------|-------|
-| #1   | GPT-4o         | Closed | 94.0%   | 92.7%       | 99.9%           | 34.7%     | 80.3% |
-| #2   | Gemini-2-Flash | Closed | 94.0%   | 90.0%       | 96.9%           | 34.0%     | 78.7% |
-| #3   | Gemini-1.5-Pro | Closed | 93.3%   | 91.3%       | 93.7%           | 34.3%     | 78.2% |
-
 ### Submit Your Model
 
 Have a FHIR-capable model you want to include in our leaderboard? Visit the [leaderboard page](https://ahmedidr.github.io/fhir-workbench/) and submit your HuggingFace model repository URL for evaluation.
